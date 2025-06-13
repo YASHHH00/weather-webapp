@@ -9,7 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    # ✅ ADD THIS PERMISSIONS BLOCK 👇
     permissions:
       contents: read
       pages: write
@@ -25,7 +24,7 @@ jobs:
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "Weather App"
+          path: "."   # 👈 Yeh important hai
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
